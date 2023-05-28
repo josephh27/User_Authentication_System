@@ -13,12 +13,6 @@ class SignupContr extends Signup{
         $this->email = $email;
     }
 
-    public function debug_to_console($data) {
-        $output = $data;
-        if (is_array($output))
-            $output = implode(',', $output);
-    }
-
     public function signupUser() {
         if ($this->emptyInput() == false) {
             //echo "Empty input.";

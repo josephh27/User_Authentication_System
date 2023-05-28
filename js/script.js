@@ -2,6 +2,20 @@
 const navToggler = document.querySelector('.nav-toggler');
 const navMenu = document.querySelector('.site-navbar ul');
 const navLinks = document.querySelectorAll('.site-navbar a');
+const navContainer = document.querySelector('.nav-container');
+
+function fadeHeader() {
+  window.addEventListener('scroll', function(){
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > 250) {
+      navContainer.style.top = "-80px";
+    } else {
+      navContainer.style.top = "0";
+    }
+  })
+}
+
+// fadeHeader();
 
 // load all event listners
 allEventListners();
@@ -27,12 +41,15 @@ function navLinkClick() {
   }
 }
 
+//Removing tab highlight from previous tab location
 const removeTabHighlight = () => {
   Array.from(navLinks).forEach((elem) => {
     elem.classList.remove('active')
   })
 }
 
+
+//Adding tab highlight for current tab highlight
 const addTabHighlight = () => {
   Array.from(navLinks).forEach((elem) => {
   if (elem.href === location.href) {
@@ -68,3 +85,4 @@ function setFocus(on) {
     });
   }
 }            
+
