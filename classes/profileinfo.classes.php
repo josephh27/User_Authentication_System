@@ -2,7 +2,7 @@
 
     class ProfileInfo extends Dbh {
         protected function getProfileInfo($userId) {
-            $stmt = $this->connect()->prepare('SELECT * FROM profiles WHERE users_id = ?;');
+            $stmt = $this->connect()->prepare('SELECT * FROM profiles WHERE profiles_id = ?;');
 
             if (!$stmt->execute(array($userId))) {
                 $stmt = null;
@@ -10,13 +10,13 @@
                 exit();
             }
 
-            if ($stmt->rowCount() === 0) {
+            $profileData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            if (count($profileData) == 0) {
                 $stmt = null;
-                header('location: ../profile.php?error=profilenotfound');
+                // header('location: ../profile.php?error=profilenotfound');
                 exit();
             }
 
-            $profileData = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             return $profileData;
         }

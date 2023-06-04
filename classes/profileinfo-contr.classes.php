@@ -11,10 +11,9 @@ class ProfileInfoContr extends ProfileInfo {
 
     public function defaultProfileInfo() {
         $profileAbout = "Tell people about yourself! Your interests, hobbies, or favorite TV show!";
-        $profileTitle = "Hi! I am " . $this->$userUid;
+        $profileTitle = "Hi! I am " . $this->userUid;
         $profileText = "Welcome to my profile page! Soon I'll be able to tell you more about myself, and what you can find on my profile page.";
-
-        $this->setProfileInfo($profileAbout, $profileTitle, $profileText, $userId);
+        $this->setProfileInfo($profileAbout, $profileTitle, $profileText, $this->userId);
     }
 
     public function updateProfileInfo($about, $introTitle, $introText) {
