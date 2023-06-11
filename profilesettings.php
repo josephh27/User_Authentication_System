@@ -20,7 +20,7 @@
                 value="<?php $profileInfo->fetchTitle($_SESSION["userid"]); ?>">
 
                 <textarea name="introtext" cols="30" rows="10" placeholder="Profile introduction..."><?php $profileInfo->fetchText($_SESSION["userid"]); ?></textarea>
-                <button type="submit" name="submit">
+                <button type="submit" name="submit">SAVE</button>
             </form>
 
         </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500&display=swap');
 
 *{
     margin: 0;
@@ -8,7 +8,7 @@
   }
 
   html {
-    min-height: 100%;
+    height: 100%;
   }
 
   body{
@@ -17,13 +17,21 @@
     background: #000000;
   }
  
+  .wrapper {
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
   /* navbar regular css start */
 
   .nav-container {
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
     border-bottom: 1px solid #000;
@@ -35,6 +43,9 @@
   }
 
   .site-navbar {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,15 +119,90 @@
   }
   /* nav-toggler css start */
 
-.hero-section {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)), url('../images/hero_bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  .landing-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/landing_background.png');
+    background-position: 20% 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
+  #landing-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+  }
+
+  .landing-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  .signin-greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bx.bxs-down-arrow-circle {
+    position: relative;
+    top: 2px;
+    font-size: 1.1rem;
+  }
+  
+  .landing-right-inner {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding-top: 100px;
+    
+  }
+
+  .landing-right-inner h1 {
+    text-align: center;
+  }
+
+  .landing-right img[src="images/university_logo.png"] {
+    width: 100px;
+    height: 100px;
+  }
+
+  .landing-buttons {
+    display: block;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  .landing-buttons.student {
+    background: #1B73E8;
+  }
+
+  .landing-buttons.faculty {
+    background: #AE1400;
+  }
+
+  .landing-right-inner p {
+    text-align: center;
+  }
+  
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -234,118 +320,7 @@ input {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-
 }
-
-.form-inputs button[name="submit"]:hover {
-    background: rgb(71,207,115);
-}
-
-.hero-content {
-  position: absolute;
-  display: flex;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  gap: 20px;
-}
-
-.ticket-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #2AAA8A;
-  padding: 20px;
-  gap: 5px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-family: 'Inter', sans-serif;
-  font-size:  1.2rem;
-  cursor: pointer;
-}
-
-.ticket-btn.location {
-  background: #89CFF0;
-}
-
-.ticket .fa-ticket {
-  font-size: 1.4rem;
-}
-
-.location .bx-map-alt {
-  font-size: 2rem;
-}
-
-.profile-body-wrapper {
-  margin-top: 100px;
-}
-
-.profile-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  margin: 0px auto;
-  padding: 20px;
-  border-radius: 20px;
-  gap: 10px;
-  max-width: 700px;
-  background: beige;
-}
-
-.profile-cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.profile-wrapper .profile-cover > img {
-  width: 100%;
-  object-fit: cover;
-  max-height: 200px;
-}
-
-.profile-settings {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.profile-settings-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.settings-button {
-  padding: 10px 15px;
-  background: green;
-  border-radius: 10px;
-}
-
-.settings-button a {
-  height: 100%;
-  width: 100%;
-}
-
-
-.profile-settings textarea, .profile-settings input {
-  font-family: 'Open Sans', sans-serif;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-}
-.profile-settings textarea {
-  resize: none;
-  width: 100%;
-  height: 300px;
-}
-  
-
 
   /* mobile breakpoint start */
   @media screen and (max-width: 767px) {

@@ -28,7 +28,7 @@ class ProfileInfoContr extends ProfileInfo {
 
     private function emptyInputCheck($about, $introTitle, $introText) { 
         $result;
-        if (check($about) || check($introTitle) || check($introText)) {
+        if (empty($about) || empty($introTitle) || empty($introText)) {
             $result = true;
         } else {
             $result = false;
