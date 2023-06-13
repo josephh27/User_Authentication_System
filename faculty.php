@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <script src="https://kit.fontawesome.com/ee74f8cc5e.js" crossorigin="anonymous"></script> -->
-    <title>Document</title>
+    <title>Faculty Module</title>
 </head>
 <body>
     <div class="landing-wrapper">

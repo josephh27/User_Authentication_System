@@ -187,7 +187,6 @@ color: blue;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-
 }
 
 .landing-buttons.student {
@@ -259,7 +258,6 @@ color: blue;
     margin: 30px auto 0 auto;
 }
 
-
 body .signup-form:nth-child(2) {
   margin-top: 100px;
 }
@@ -275,7 +273,58 @@ body .signup-form:nth-child(2) {
     gap: 16px;
 }
 
-/* input {
+.admin-wrapper {
+  max-width: 1440px;
+
+}
+
+  /* mobile breakpoint start */
+  @media screen and (max-width: 767px) {
+    .nav-container {
+      max-width: 720px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    .site-navbar {
+      height: 60px;
+    }
+
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px); 
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0,0,0,0.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px 0px;
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(255,255,255,.1);
+    }
+    .site-navbar ul.open {
+      max-height: calc(100vh - 60px);
+      overflow: visible;
+    }
+    /* navbar css for mobile end */
+  }
+  /* mobile breakpoint end */
+
+  
+  /* input {
     background: white;
     font-family: 'Open Sans', sans-serif;
 }
@@ -367,50 +416,3 @@ body .signup-form:nth-child(2) {
     font-weight: bold;
     cursor: pointer;
 } */
-
-  /* mobile breakpoint start */
-  @media screen and (max-width: 767px) {
-    .nav-container {
-      max-width: 720px;
-    }
-    /* navbar css for mobile start */
-    .nav-toggler{
-      display: block;
-    }
-    .site-navbar {
-      height: 60px;
-    }
-
-    .site-navbar ul {
-      position: absolute;
-      width: 100%;
-      height: calc(100vh - 60px); 
-      left: 0;
-      top: 60px;
-      flex-direction: column;
-      align-items: center;
-      border-top: 1px solid #444;
-      background-color: rgba(0,0,0,0.75);
-      max-height: 0;
-      overflow: hidden;
-      transition: .3s;
-    }
-    .site-navbar ul li {
-      width: 100%;
-      text-align: center;
-    }
-    .site-navbar ul li a {
-      padding: 25px 0px;
-    }
-    .site-navbar ul li a:hover {
-      background-color: rgba(255,255,255,.1);
-    }
-    .site-navbar ul.open {
-      max-height: calc(100vh - 60px);
-      overflow: visible;
-    }
-    /* navbar css for mobile end */
-  }
-  /* mobile breakpoint end */
-
-  
