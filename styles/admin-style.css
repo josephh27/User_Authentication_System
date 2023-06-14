@@ -107,9 +107,69 @@ a {
 .header {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     background: #d3a625;
     padding: 0.8rem 2rem 0.8rem 5.8rem;
 }
+
+.admin-profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#admin-name {
+    font-weight: bold;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0.8rem 2rem 0.8rem 5.8rem;
+}
+
+.database-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.database-buttons > button {
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+
+.database-buttons > button:first-child {
+    background: #13c49a;
+}
+
+.database-buttons > button:nth-child(2) {
+    background: #ae0001;
+}
+
+.database-buttons > button:nth-child(3) {
+    background: #68BBE3;
+}
+
+.record-table {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, auto)) min-content;
+    border: solid 1px black;
+    overflow-x: auto;
+
+}
+
+.record-table div {
+    border: solid 1px black;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+
+
 
 /* Search Bar Customization */
 .searchBox {

@@ -78,13 +78,26 @@
                     </i>
                 </button>
             </div>
-            <h1></h1>
-            <div>
-
+            <div class="admin-profile">
+                <i class="fa-solid fa-user-tie nav-icon"></i>
+                <p id="admin-name">ADMIN1</p>
             </div>
         </div>
         <div class="tab-content">
-
+            <h1>Student Database</h1>
+            <div class="database-buttons">
+                <button>Add Student</button>
+                <button>Remove Student</button>
+                <button>Edit Student</button>
+            </div>
+            <div class="record-table">
+                <div>HOTDOG</div>
+                <div>NEWBIE</div>
+                <div>SUPER MARIO BROS</div>
+                <div>CDSKODKSK DSADKSA</div>
+                <div>CDSKODKSK DSADKSA</div>
+                <div>M</div>
+            </div>
         </div>
     </div>
 </body>
