@@ -273,10 +273,6 @@ body .signup-form:nth-child(2) {
     gap: 16px;
 }
 
-.admin-wrapper {
-  max-width: 1440px;
-
-}
 
   /* mobile breakpoint start */
   @media screen and (max-width: 767px) {

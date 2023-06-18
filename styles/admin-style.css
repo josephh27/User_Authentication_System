@@ -156,7 +156,7 @@ a {
 
 .record-table {
     display: grid;
-    grid-template-columns: repeat(5, minmax(150px, auto)) min-content;
+    grid-template-columns: min-content repeat(5, minmax(150px, auto)) min-content;
     border: solid 1px black;
     overflow-x: auto;
 
@@ -213,7 +213,24 @@ a {
     line-height: 40px;
     width: 0px;
 }
+
+.container-fluid {
+    padding: 0.8rem 2rem 0.8rem 5.8rem;
+    max-width: 1200px;
+}
+
+.add-student-form label{
+    display: block;
+}
   
+.col > input, .col > select {
+    width: 100%;
+}
+
+.col > label {
+    display: block;
+}
+
 @media screen and (max-width: 620px) {
 .searchBox:hover > .searchInput {
     width: 150px;
