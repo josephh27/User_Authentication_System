@@ -29,12 +29,21 @@ nav {
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
-
+p {
+    margin: 0;
+}
 
 .admin-wrapper {
     width: 100%;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .logo.nav-item {
@@ -109,6 +118,7 @@ a {
     display: flex;
     justify-content: space-between;
     background: #d3a625;
+    gap: 10px;
     padding: 0.8rem 2rem 0.8rem 5.8rem;
 }
 
@@ -131,10 +141,13 @@ a {
 
 .database-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+
 }
 
 .database-buttons > button {
+    width: 100px;
     padding: 20px;
     border-radius: 15px;
     cursor: pointer;
@@ -156,7 +169,7 @@ a {
 
 .record-table {
     display: grid;
-    grid-template-columns: min-content repeat(5, minmax(150px, auto)) min-content;
+    grid-template-columns: min-content repeat(3, minmax(150px, auto));
     border: solid 1px black;
     overflow-x: auto;
 
@@ -168,17 +181,22 @@ a {
     word-wrap: break-word;
 }
 
-
+.table-header {
+    font-weight: bold;
+}
 
 
 /* Search Bar Customization */
 .searchBox {
+    position: relative;
     background: #2f3640;
     height: 40px;
     border-radius: 40px;
 }
 
-.searchBox:hover > .searchInput {
+
+
+.searchBox:hover > .searchInput, .searchBox > .searchInput:not(:placeholder-shown) {
     width: 240px;
     padding: 0 16px;
 }
@@ -189,8 +207,8 @@ a {
   }
   
 .searchButton {
-    color: white;
     float: right;
+    color: white;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -211,11 +229,27 @@ a {
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
-    width: 0px;
+    width: 0;
+}
+
+#student-form-container {
+    padding: 20px;
+    position: relative;
+    width: 95%;
+    max-height: 80vh;
+    top: 0;
+    left: 0;
+    background: white;
+    border-radius: 15px;
+    z-index: 10;
+    overflow-x: auto;
+}
+
+#student-modal {
+    margin: 100px 0px;
 }
 
 .container-fluid {
-    padding: 0.8rem 2rem 0.8rem 5.8rem;
     max-width: 1200px;
 }
 
@@ -231,9 +265,43 @@ a {
     display: block;
 }
 
-@media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-    width: 150px;
-    padding: 0 6px;
+/* Bootstrap default overrides*/
+ol, ul {
+    padding: 0;
 }
+
+input[type="submit"] {
+    background: #0C6EFD;
+    color: white;
+    border-radius: 10px;
+}
+
+.form-control {
+    appearance: auto;
+}
+
+@media screen and (max-width: 620px) {
+
+.searchBox {
+    width: 100%;
+}
+
+.searchBox:hover > .searchInput, .searchBox > .searchInput:not(:placeholder-shown) {
+    width: calc(100% - 40px);
+}
+
+.searchBox > .searchInput:placeholder-shown {
+    text-overflow: ellipsis;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .searchBox {
+        order: 2;
+    }
 }
